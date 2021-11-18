@@ -1,4 +1,4 @@
-package kata5p1;
+package kata5p1.examples;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

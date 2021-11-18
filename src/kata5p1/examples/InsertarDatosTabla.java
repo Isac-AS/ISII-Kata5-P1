@@ -1,4 +1,4 @@
-package kata5p1;
+package kata5p1.examples;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,6 @@ import java.sql.SQLException;
 public class InsertarDatosTabla {
 
     private Connection connect() {
-// Cadena de conexión SQLite
         String url = "jdbc:sqlite:mail.db";
         Connection conn = null;
         try {
@@ -20,10 +19,9 @@ public class InsertarDatosTabla {
         }
         return conn;
     }
-// Método para insertar datos en la tabla direcc_email
 
     public void insert(String email) {
-        String sql = "INSERT INTO direcc_email(direccion) VALUES(?)";
+        String sql = "INSERT INTO EMAIL(direccion) VALUES(?)";
         try (Connection conn = this.connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, email);
